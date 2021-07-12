@@ -1,0 +1,18 @@
+<h2>App(Root) Component</h2>
+
+Show Components:
+<input type="radio" [(ngModel)]='cmp' value="about"> About |
+<input type="radio" [(ngModel)]='cmp' value="help"> Help |
+<input type="radio" [(ngModel)]='cmp' value="contact"> Contact |
+<input type="radio" [(ngModel)]='cmp' value="login"> Login  <hr/>
+
+
+<app-about *ngIf=' cmp=="about" '></app-about>
+
+<app-help *ngIf='cmp=="help"'>  </app-help>
+
+<app-contact *ngIf='cmp=="contact"'></app-contact>
+
+<app-dummy-login *ngIf='cmp=="login"'></app-dummy-login>
+
+=========
