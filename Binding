@@ -1,0 +1,63 @@
+<h1>Root Component UI </h1>
+<h2>Two Way Data binding, Ex-01</h2>
+Enter Name at source:
+<input type="text" [(ngModel)]='name'> <hr/>
+Name: {{name}} <hr/>
+
+Enter Name at target:
+<input type="text" [(ngModel)]='name'> <hr/>
+
+
+--------------------------
+
+<h1>Root Component UI </h1>
+<h2>Two Way Data binding, Ex-02</h2>
+Enter No:
+<input type="number" [(ngModel)]='n' /> <br/>
+{{"Given no is: "+n}} <br/>
+{{"Square of "+n+" is: "+(n*n)}} <br/>
+
+-----------------
+<h1>Root Component UI </h1>
+<h2>Two Way Data binding, Ex-03</h2>
+Enter No1:
+<input type="number" [(ngModel)]='a' /> <br/>
+
+Enter No2:
+<input type="number" [(ngModel)]='b' /> <br/>
+{{"a = "+a+", b = "+b}} <br/>
+{{"Add of "+a+" and "+b+" is: "+(a+b)}} <br/>
+{{"Sub of "+a+" and "+b+" is: "+(a-b)}} <br/>
+{{"Mult of "+a+" and "+b+" is: "+(a*b)}} <br/>
+{{"Div of "+a+" and "+b+" is: "+(a/b)}} <br/>
+
+========================
+<h1>Root Component UI </h1>
+<h2>Two Way Data binding, Ex-04</h2>
+Choose Gender:
+<input type="radio" [(ngModel)]='gender' value="Mr."> Male
+<input type="radio" [(ngModel)]='gender' value="Miss."> Female <br/>
+
+Hello {{gender}}
+
+=======================
+
+<h1>Root Component UI </h1>
+<h2>Two Way Data binding, Ex-05</h2>
+
+<input type="checkbox" [(ngModel)]='terms'> Terms and conditions <hr/>
+{{terms}}
+
+======================
+
+<h1>Root Component UI </h1>
+<h2>Two Way Data binding, Ex-06</h2>
+
+Choose Direction
+<select [(ngModel)]='direction'>
+    <option value="North">North</option>
+    <option value="East">East</option>
+    <option value="West">West</option>
+    <option value="South">South</option>
+</select> {{direction}}
+==========================
