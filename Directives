@@ -1,0 +1,65 @@
+<h1>Structural Directives, Ex-01</h1>
+
+<div *ngIf='false'>
+    <p>I am visible default</p>
+</div>
+
+<ng-template [ngIf]='true'>
+    <p>This is invisible bydefault</p>
+</ng-template>
+
+===============
+<h1>Structural Directives, Ex-02</h1>
+
+<input type="checkbox" [(ngModel)]='div1'>
+Show Division1 <hr>
+<div *ngIf='div1'>
+    <p>I am division1, I am visible default</p>
+</div>
+
+===========
+<h1>Structural Directives, Ex-02</h1>
+
+<input type="checkbox" 
+ [(ngModel)]='div1' >
+Show Division1 <hr>
+<div *ngIf='div1; else x'>
+    <p>Thankq for accepting terms</p>
+</div>
+
+<ng-template #x>
+    <p>Must read and accept terms</p>
+</ng-template>    
+
+========================
+<h1>Structural Directives, Ex-02</h1>
+<div *ngIf='isOfficeWorkingHours(); else x'>
+<table border="1">
+    <tr>
+        <td>User Name</td>
+        <td><input type="text"></td>
+    </tr>
+    <tr>    
+        <td>Password</td>
+        <td><input type="password"></td>
+    </tr>
+<tr>
+    <td><button>Login</button></td>
+    <td>{{msg}}</td>
+</tr>
+</table>
+</div>
+
+<ng-template #x>
+    <p>CAnnot login out of office hourse</p>
+</ng-template>
+
+
+isOfficeWorkingHours(){
+      var hour = new Date().getHours();
+      if ( hour>=10 && hour<16 )
+        return true;
+      else
+        return false;
+    }
+============================
